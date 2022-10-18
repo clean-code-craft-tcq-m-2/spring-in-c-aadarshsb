@@ -13,6 +13,7 @@ TEST_CASE("reports average, minimum and maximum") {
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
     struct Stats computedStats = compute_statistics(numberset, setlength);
     float epsilon = 0.001;
+    printf("%f - smallest value \n", computedStats.max);
     REQUIRE(abs(computedStats.average - 4.525) < epsilon);
     REQUIRE(abs(computedStats.max - 8.9) < epsilon);
     REQUIRE(abs(computedStats.min - 1.5) < epsilon);
@@ -20,10 +21,7 @@ TEST_CASE("reports average, minimum and maximum") {
 
 TEST_CASE("average is NaN for empty array") {
     struct Stats computedStats = compute_statistics(0, 0);
-    if(1 == isnan(computedStats.average))
-    {
-        printf("Yes!, this is correct \n");
-    }
+    
     REQUIRE(isnan(computedStats.average) == true);
     REQUIRE(isnan(computedStats.max) == true);
     REQUIRE(isnan(computedStats.min) == true);
