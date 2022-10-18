@@ -1,8 +1,8 @@
 #include "alerters.h"
 #include "stats.h"
 
-emailAlerter = &emailAlerterfn;
-ledAlerter = &ledAlerterfn;
+alerter_funcptr emailAlerter = &emailAlerterfn;
+alerter_funcptr ledAlerter = &ledAlerterfn;
 
 void emailAlerterfn()
 {
