@@ -26,6 +26,8 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
     {
         //Here check the condition and call the email and led alerter
         //and modify the email and led alert count there in fn pointer
+        alerters[0]();
+        alerters[1]();
     }
 }
 
