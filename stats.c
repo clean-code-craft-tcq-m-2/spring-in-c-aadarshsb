@@ -3,6 +3,7 @@
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
+    s.min = INFINITY;
     double TotalCount;
     if(0 == setlength || 0 == numberset)
     {
