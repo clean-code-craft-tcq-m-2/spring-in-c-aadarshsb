@@ -24,9 +24,9 @@ TEST_CASE("average is NaN for empty array") {
     {
         printf("Yes!, this is correct \n");
     }
-    REQUIRE(isnan(computedStats.average) == 1);
-    REQUIRE(isnan(computedStats.max) == 1);
-    REQUIRE(isnan(computedStats.min) == 1);
+    REQUIRE(computedStats.average == FP_NAN);
+    REQUIRE(computedStats.max == FP_NAN);
+    REQUIRE(computedStats.min == FP_NAN);
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
     
