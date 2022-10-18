@@ -3,7 +3,7 @@
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
     double TotalCount;
-    uint8_t IsNaN = 0;
+    unsigned char IsNaN = 0;
     for( int iterator = 0; iterator < setlength; iterator++)
     {
         //Check, in any case, there should not be NaN
