@@ -3,7 +3,8 @@
 
 #include "stats.h"
 
-alerter_funcptr emailAlerter, ledAlerter;
+extern alerter_funcptr emailAlerter;
+extern alerter_funcptr ledAlerter;
 
 void emailAlerterfn();
 void ledAlerterfn();
