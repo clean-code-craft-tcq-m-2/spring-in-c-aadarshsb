@@ -1,11 +1,14 @@
 #include "alerters.h"
 #include "stats.h"
 
-void emailAlerter()
+emailAlerter = &emailAlerterfn;
+ledAlerter = &ledAlerterfn;
+
+void emailAlerterfn()
 {
   emailAlertCallCount++;
 }
-void ledAlerter()
+void ledAlerterfn()
 {
   ledAlertCallCount++;
 }
